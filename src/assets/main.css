@@ -1,0 +1,42 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Fredoka Variable", ui-rounded, system-ui, sans-serif;
+  --font-body: "Nunito Variable", system-ui, sans-serif;
+
+  --color-cream: #fffaf3;
+  --color-ink: #2b2540;
+
+  --color-brand-100: #ffe8d1;
+  --color-brand-400: #ffa24d;
+  --color-brand-500: #ff8420;
+  --color-brand-600: #d95f06;
+
+  --color-ocean-100: #dff1ff;
+  --color-ocean-600: #1b73b3;
+
+  --color-grape-100: #efe6ff;
+  --color-grape-600: #6a3fc4;
+
+  --color-leaf-100: #dcf5e3;
+  --color-leaf-600: #1f7a3f;
+
+  --radius-card: 1.5rem;
+  --shadow-pop: 0 6px 0 rgb(43 37 64 / 0.08);
+}
+
+/* Reading-mode colors. The story page switches these with a data attribute. */
+:root { --read-bg: #fffdf8; --read-fg: #2b2540; }
+[data-read-theme="sepia"] { --read-bg: #f4ecd8; --read-fg: #4a3b26; }
+[data-read-theme="night"] { --read-bg: #1d1b2e; --read-fg: #ece9ff; }
+
+@layer base {
+  body { @apply bg-cream font-body text-ink antialiased; }
+  h1, h2, h3 { @apply font-display; }
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex min-h-12 items-center justify-center rounded-full bg-brand-500 px-6 text-lg font-bold text-ink shadow-pop transition hover:bg-brand-400 focus-visible:outline-4 focus-visible:outline-offset-2 focus-visible:outline-ocean-600 disabled:pointer-events-none disabled:opacity-50;
+  }
+}

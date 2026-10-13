@@ -1,3 +1,7 @@
+import '@/assets/main.css'
+import '@fontsource-variable/fredoka'
+import '@fontsource-variable/nunito'
+
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
 

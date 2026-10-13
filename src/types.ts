@@ -30,3 +30,9 @@ export interface StoryList {
   page: number;
   pageSize: number;
 }
+
+export interface PillItem {
+  value: string;
+  label: string;
+  aria?: string;
+}
