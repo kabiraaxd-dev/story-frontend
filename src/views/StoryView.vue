@@ -72,7 +72,7 @@ watch(() => route.params.slug, (slug) => { if (slug) load() }, { immediate: true
     >
       <h1 class="text-3xl sm:text-5xl">{{ story.title }}</h1>
       <p class="mt-2 opacity-80">
-        By {{ story.author.name }} · {{ story.category.name }} · Ages {{ story.ageGroup.label }}
+        By {{ story.author.name }} · {{ story.category.name }} · Ages {{ story.ageGroup.label }} · {{ story.readingMinutes }} min read
       </p>
 
       <img

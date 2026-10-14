@@ -19,6 +19,7 @@ export interface StorySummary {
   ageGroup: AgeGroup;
   author: { name: string };
   tags: { name: string; slug: string }[];
+  readingMinutes: number;
 }
 
 export interface StoryDetail extends StorySummary {

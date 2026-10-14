@@ -33,7 +33,11 @@ defineProps<{ story: StorySummary }>()
       <div class="mt-auto space-x-1">
         <span v-for="tag in story.tags" :key="tag.slug" class="rounded text-sm bg-blue-100 px-2 py-1 text-blue-600">#{{ tag.name }}</span>
       </div>
-      <p class=" pt-2 text-sm text-ink/60">by {{ story.author.name }}</p>
+      <!-- <p class=" pt-2 text-sm text-ink/60">by {{ story.author.name }}</p> -->
+      <p class="mt-auto flex items-center justify-between pt-2 text-sm text-ink/60">
+  <span>by {{ story.author.name }}</span>
+  <span><span aria-hidden="true">⏱</span> {{ story.readingMinutes }} min read</span>
+</p>
     </div>
   </RouterLink>
 </template>
